@@ -31,7 +31,7 @@ def get_configuration_data():
     return data
 
 config = get_configuration_data()
-session, Base = loadConnection(config['database_string'], True)
+session, Base = loadConnection(config['database_string'], config['echo'])
 
 
 class Master(Base):
